@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+table, th, td {
+  border: 1px solid;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+}
+.button-link {
+  padding: 10px 20px;
+  background-color: #a61e4d;
+  color: white;
+  background-color:#3f50b5;
+}
+
+
+</style>
+<body style="background-image: url('background.avif');
+background-repeat: no-repeat;background-attachment: fixed;background-size: cover;">
+<div class="tab" style="width:500px; margin:0 auto; margin-top:250px;">
+
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+        </tr>
+        <tr th:each="user: ${userList}">
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.firstName}"></td>
+            <td th:text="${user.lastName}"></td>
+            <td th:text="${user.phoneNumber}"></td>
+            <td th:text="${user.email}"></td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <a href='http://localhost:8080/' class=”button-link”>Back to the main page</a>
+</div>
+</body>
+</html>

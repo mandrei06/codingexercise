@@ -42,36 +42,57 @@ button:focus{
 label{
   color: #6A1B9A;
   text-align: center}
-
+input{
+background: transparent;
+border-color: white;
+}
 </style>
-<body>
-<div class="tab" style="width:300px; margin:0 auto; margin-top:250px;">
+<body style="background-image: url('background.avif');
+background-repeat: no-repeat;background-attachment: fixed;background-size: cover;">
+<div class="tab" style="width:400px; margin:0 auto; margin-top:50px;">
     <form action="/addUser" method="POST" style="width: 100%; margin: 0 auto;">
+        <label for="firstName" style="font-size:30px;font-family:'Courier New'; color:red;">Add a new user:</label>
+        <br>
+        <br>
+        <br>
         <label for="firstName">Please enter your first name:</label>
         <div>
             <br>
-            <input name="firstName" id="firstName" type="text" placeholder="firstName" required>
+            <input name="firstName" id="firstName" type="text" placeholder="Please enter first name" required>
         </div>
         <br>
         <label for="lastName">Please enter your last name:</label>
         <div>
             <br>
-            <input name="lastName" id="lastName" type="text" placeholder="lastName" required>
+            <input name="lastName" id="lastName" type="text" placeholder="Please enter last name" required>
         </div>
         <br>
         <label for="phoneNumber">Please enter your phone number:</label>
         <div>
             <br>
-            <input name="phoneNumber" id="phoneNumber" type="text" placeholder="phoneNumber" required>
+            <input name="phoneNumber" id="phoneNumber" type="text" placeholder="Please enter phone number" required>
         </div>
         <br>
         <label for="email">Please enter your email:</label>
         <div>
             <br>
-            <input name="email" id="email" type="email" placeholder="email" required>
+            <input name="email" id="email" type="email" placeholder="Please enter your email" required>
         </div>
         <div>
             <button id="submitButton" style="margin-top: 20px;color: white; background-color:#3f50b5">Submit</button>
+        </div>
+    </form>
+    <br>
+    <br>
+    <br>
+    <form action="/getAllUsers" method="GET" style="width: 100%; margin: 0 auto;">
+        <label for="submitButton" style="font-size:30px;font-family:'Courier New'; color:red;">Or see all the users:</label>
+        <br>
+        <br>
+        <br>
+
+        <div>
+            <button id="getAllUsersButton" style="margin-top: 20px;color: white; background-color:#3f50b5">See all the users</button>
         </div>
     </form>
 </div>
