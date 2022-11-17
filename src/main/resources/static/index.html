@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+</head>
+
+<style>
+    input {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa;
+    border-radius: 10px;
+    -webkit-appearance: none;
+}
+.tab input:focus{
+
+  border:1px solid #6a1b9a !important;
+  outline: none;
+}
+button {
+    background-color: #6A1B9A;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer
+}
+
+button:hover {
+    opacity: 0.8
+}
+
+button:focus{
+
+  outline: none !important;
+}
+label{
+  color: #6A1B9A;
+  text-align: center}
+
+</style>
+<body>
+<div class="tab" style="width:300px; margin:0 auto; margin-top:250px;">
+    <form action="/addUser" method="POST" style="width: 100%; margin: 0 auto;">
+        <label for="firstName">Please enter your first name:</label>
+        <div>
+            <br>
+            <input name="firstName" id="firstName" type="text" placeholder="firstName" required>
+        </div>
+        <br>
+        <label for="lastName">Please enter your last name:</label>
+        <div>
+            <br>
+            <input name="lastName" id="lastName" type="text" placeholder="lastName" required>
+        </div>
+        <br>
+        <label for="phoneNumber">Please enter your phone number:</label>
+        <div>
+            <br>
+            <input name="phoneNumber" id="phoneNumber" type="text" placeholder="phoneNumber" required>
+        </div>
+        <br>
+        <label for="email">Please enter your email:</label>
+        <div>
+            <br>
+            <input name="email" id="email" type="email" placeholder="email" required>
+        </div>
+        <div>
+            <button id="submitButton" style="margin-top: 20px;color: white; background-color:#3f50b5">Submit</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
