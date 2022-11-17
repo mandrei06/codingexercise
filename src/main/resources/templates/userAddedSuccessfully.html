@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>User Added</title>
+</head>
+<body>
+<!--<div th:insert="fragments/header :: main"></div>-->
+<h1>User Added Successfully </h1>
+<script th:inline="javascript">
+    window.alert("The user was added successfully! If you want you can add another one!");
+    window.location.href = 'http://localhost:8080/';
+</script>
+<!--<div th:insert="fragments/footer :: main"></div>-->
+</body>
+</html>
